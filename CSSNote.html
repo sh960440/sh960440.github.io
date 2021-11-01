@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSS Notes">
+        <title>CSS Notes</title>
+    </head>
+    <body>
+        <header>
+            <div style="text-align: center"><h1>CSS Notes</h1></div>
+            <hr/>
+        </header>
+
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        
+        <style>
+            [type='radio'] {
+                margin: 20px;
+            }
+
+            #my-first-id {
+                color: green;
+            }
+
+            h6 {color: red;}
+            .green-text {color: green;}
+            .red-30px-font {color: red; font-size: 30px;}
+            .monospace-font {font-family: monospace;}
+            .lobster-font {font-family: Lobster, 'Open Sans';} /*.lobster-font內' '中的是備用字體*/
+            .larger-image {width: 300px;}
+            .my-border {
+                border-color: darkblue; border-width: 5px; border-style: solid; border-radius: 5px;
+            }
+            .circular-image {
+                border-color: black; border-width: 5px; border-style: dotted; border-radius: 50%;
+            }
+            .brown-background { background-color: brown;}
+            .box {
+                border-style: solid;
+                border-color: black;
+                border-width: 3px;
+                text-align: center;
+            }
+            .yellow-box {
+                width: 300px;
+                background-color: yellow;
+                padding: 20px;
+            }
+            .red-box {
+                background-color: crimson;
+                color: #fff;
+                padding: 10px;
+            }
+            .blue-box {
+                background-color: blue;
+                color: #fff;
+                padding: 5px;
+            }
+            .red-box2 {
+                background-color: crimson;
+                color: #fff;
+                padding: 10px;
+                margin: 10px;
+            }
+            .blue-box2 {
+                background-color: blue;
+                color: #fff;
+                padding: 5px;
+                margin: 5px;
+            }
+            .red-box3 {
+                background-color: crimson;
+                color: #fff;
+                padding: 10px;
+                margin-bottom: -10px;
+            }
+            .blue-box3 {
+                background-color: blue;
+                color: #fff;
+                padding: 5px;
+                margin-bottom: -5px;
+            }
+            .green-box {
+                background-color: darkgreen;
+                color: #fff;
+                width: 200px;
+                padding-left: 10px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                padding-right: 40px;
+            }
+            .green-box2 {
+                background-color: darkgreen;
+                color: #fff;
+                width: 200px;
+                margin-left: 40px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                margin-right: 20px;
+            }
+            .green-box3 {
+                background-color: darkgreen;
+                color: #fff;
+                width: 200px;
+                padding: 20px 40px 20px 40px;
+            }
+
+            .penguin {
+                --penguin-skin: black;
+                --penguin-belly: gray;
+                --penguin-beak: yellow;
+
+                position: relative;
+                margin: auto;
+                display: block;
+                margin-top: 5%;
+                width: 300px;
+                height: 300px;
+            }
+            .penguin-top {
+                top: 10%;
+                left: 25%;
+                background: var(--penguin-skin, gray);
+                width: 50%;
+                height: 45%;
+                border-radius: 70% 70% 60% 60%;
+            }
+            .penguin-bottom {
+                top: 40%;
+                left: 23.5%;
+                background: var(--penguin-skin, gray);
+                width: 53%;
+                height: 45%;
+                border-radius: 70% 70% 100% 100%;
+            }          
+            .right-hand {
+                top: 0%;
+                left: -5%;
+                background: var(--penguin-skin, gray);
+                width: 30%;
+                height: 60%;
+                border-radius: 30% 30% 120% 30%;
+                transform: rotate(45deg);
+                z-index: -1;
+            }      
+            .left-hand {
+                top: 0%;
+                left: 75%;
+                background: var(--penguin-skin, gray);
+                width: 30%;
+                height: 60%;
+                border-radius: 30% 30% 30% 120%;
+                transform: rotate(-45deg);
+                z-index: -1;
+            }          
+            .right-cheek {
+                top: 15%;
+                left: 35%;
+                background: var(--penguin-belly, white);
+                width: 60%;
+                height: 70%;
+                border-radius: 70% 70% 60% 60%;
+            } 
+            .left-cheek {
+                top: 15%;
+                left: 5%;
+                background: var(--penguin-belly, white);
+                width: 60%;
+                height: 70%;
+                border-radius: 70% 70% 60% 60%;
+            }
+            .belly {
+                top: 60%;
+                left: 2.5%;
+                background: var(--penguin-belly, white);
+                width: 95%;
+                height: 100%;
+                border-radius: 120% 120% 100% 100%;
+            }
+            .right-feet {
+                top: 85%;
+                left: 60%;
+                background: var(--penguin-beak, orange);
+                width: 15%;
+                height: 30%;
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(-80deg);
+                z-index: -2222;  
+            }
+            .left-feet {
+                top: 85%;
+                left: 25%;
+                background: var(--penguin-beak, orange);
+                width: 15%;
+                height: 30%;
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(80deg);
+                z-index: -2222;  
+            }
+            .right-eye {
+                top: 45%;
+                left: 60%;
+                background: black;
+                width: 15%;
+                height: 17%;
+                border-radius: 50%; 
+            }
+            .left-eye {
+                top: 45%;
+                left: 25%;
+                background: black;
+                width: 15%;
+                height: 17%;
+                border-radius: 50%;  
+            }
+            .beak-top {
+                top: 60%;
+                left: 40%;
+                background: var(--penguin-beak, orange);
+                width: 20%;
+                height: 10%;
+                border-radius: 50%;  
+            }
+            .beak-bottom {
+                top: 65%;
+                left: 42%;
+                background: var(--penguin-beak, orange);
+                width: 16%;
+                height: 10%;
+                border-radius: 50%;  
+            }
+            .penguin * {
+                position: absolute;
+            }
+            .d1 {background: lightskyblue;}
+            .d2 {background: lightsalmon;}
+            .d3 {
+                background: paleturquoise;
+                justify-self: center;
+                align-self: end;
+            }
+            .d4 {background: lightpink;}
+            .d5 {
+                background: palegreen;
+                grid-column: 1 / 3;
+                grid-row: 2 / 4;
+            }
+            .item1 {background: lightskyblue;}
+            .item2 {
+                background: lightsalmon;
+                grid-area: 1/1/2/3;
+            }
+            .item3 {background: paleturquoise;}
+            .item4 {background: lightpink;}
+            .item5 {
+                background: palegreen;
+                grid-area: footer;
+            }
+
+            .container {
+                font-size: 40px;
+                width: 50%;
+                background: lightgray;
+                display: grid;
+                grid-template-columns: 10% auto 100px 2fr;
+                grid-template-rows: 100px 50px 50px;
+                column-gap: 20px;
+                row-gap: 5px;
+                
+            }
+            .container2 {
+                font-size: 40px;
+                min-height: 300px;
+                width: 100%;
+                background: lightgray;
+                display: grid;
+                /*grid-template-columns: repeat(3, minmax(90px, 120px));*/
+                grid-template-columns: repeat(auto-fill, minmax(90px, 150px));
+                grid-template-rows: repeat(2, 100px 50px);
+                gap: 10px;
+                /*justify-items: center;*/
+                /*align-items: end;*/
+                grid-template-areas: 
+                    "header header header"
+                    ". content content"
+                    "footer footer footer";
+            }
+
+            .item6 {
+                background: lightskyblue;
+                grid-area: header;
+            }
+            .item7 {
+                background: lightsalmon;
+                grid-area: advert;
+            }
+            .item8 {
+                background: paleturquoise;
+                grid-area: content;
+                display: grid;
+                grid-template-columns: auto 1fr;
+            }
+            .itme9 {
+                background: lightpink;
+                grid-area: footer;
+            }
+
+            .container3 {
+                font-size: 1.5em;
+                min-height: 300px;
+                width: 100%;
+                background: lightgray;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px auto 1fr auto;
+                gap: 10px;
+                grid-template-areas: 
+                    "header"
+                    "advert"
+                    "content"
+                    "footer";
+            }
+
+            .itemOne {
+                background: PaleGreen;
+            }
+            
+            .itemTwo {
+                background: BlanchedAlmond;
+            }
+
+            @media (min-width: 1000px) {
+                .container3 {
+                    grid-template-columns: auto 1fr;
+                    grid-template-rows: auto 1fr auto;
+                    grid-template-areas: 
+                        "advert header"
+                        "advert content"
+                        "advert footer";
+                }
+            }
+
+            #box-container {
+                height: 500px;
+                display: flex;
+                flex-direction: row-reverse;
+                /*flex-direction: column;*/
+                justify-content: center;
+            }
+            
+            #box-1 {
+                background-color: dodgerblue;
+                width: 50%;
+                height: 50%;
+            }
+
+            #box-2 {
+                background-color: orangered;
+                width: 50%;
+                height: 50%;
+                align-self: center;
+            }
+
+            #box-container2 {
+                background: gray;
+                display: flex;
+                height: 300px;
+                flex-wrap: wrap;
+            }
+            #box-3 {  background-color: dodgerblue; width: 25%; height: 50%; }
+            #box-4 { background-color: orangered; width: 25%; height: 50%; }
+            #box-5 { background-color: violet; width: 25%; height: 50%; }
+            #box-6 { background-color: yellow; width: 25%; height: 50%; }
+            #box-7 { background-color: green; width: 25%; height: 50%; }
+            #box-8 { background-color: black; width: 25%; height: 50%; }
+        </style> 
+
+        <main>
+            <p>
+                <h3>通用概念</h3>
+                <ul>
+                    <li>Inline styles: 直接加在tag中的屬性，例如加在p tag中的屬性</li>
+                    <li>Style block: 使用style tag，把需要的style寫在starting tag跟closing tag之間</li>
+                    <li>每個element可以使用超過一個自定義的class，只需要用逗號隔開，例如class="style-1, style-2"</li>
+                    <li>ID近似於class，差別在於每個element只能有一個ID</li>
+                    <li>ID當中設定的attribute會優先於class被使用</li>
+                    <li>每一個html element基本上都是一個長方形，其中有三個properties：padding、margin、border</li>
+                    <li>Padding表示的是Element周圍的空間，Margin是Element以外的空間</li>
+                    <li>Absolute types of length: px, in, cm, mm</li>
+                    <li>Relative units of length: em, ex, rem</li>
+                    <li>上級的element所套用的attribute會自動繼承給下面層級的element(若下級[更精確的層級]的element沒有再指定attribute覆蓋的話)</li>
+                    <li>若在同一個element中對相同的attribute(例如color)使用兩個class定義，則會取用在style tags間較晚定義的class</li>
+                    <li>承上，若在同一個element中對相同的attribute(例如color)使用class和id定義，則會取用在id定義的內容</li>
+                    <li>承上，inline styles的優先序高於class和id</li>
+                    <li>承上，使用important關鍵字可以將一個class的優先序設置為最高，例如：.pink{ color: pink !important; }</li>
+                    <li>Hex Code由一個#加上六個16進位數字組成，例如#ABC132；前面兩個數字代表紅色，中間兩個數字代表綠色，後面兩個數字代表藍色</li>
+                    <li>若Hex Code的紅綠藍都各是同樣的一對數字(例如#00FF00)，則可以縮短，舉例來說：#00FF00 = #0F0</li>
+                    <li>RGB value由三個0到255，分別代表紅綠藍的數字組成，例如rgb(100, 200, 250)</li>
+                    <li>創建variable時要從兩個-開始，例如--my-variable</li>
+                    <li>在一個element的class使用variable時，定義該variable的class必須在更上層的element中被使用</li>
+                    <li>若要不被上述條件限制，則可以在style tags間的:root { }中定義variable</li>
+                    <li>在:root { }中定義的variable可以在自定義的class中使用同樣的名字override</li>
+                    <li>TODO: 學會Media Query</li>
+                    <li>在CSS grid中，每一個方格都是一個cell</li>
+                </ul>
+            </p>
+
+            <p>
+                <h3>Use Inline Styles to Change the Color of Text</h3>
+                範例：<h4 style="color: blue;">改變h4標題的顏色為藍色</h4>
+                方法：在h4的starting tag中，h4以後加上 style="color: blue;"
+                <br/>
+
+                <h3>Use CSS Selectors to Style Elements</h3>
+                範例： <h6>讓所有h6 tag的文字都變成紅色</h6>
+                方法：在style的兩個tag之間定義h6 {color: red;}
+                <br/>
+
+                <h3>Use a CSS Class to Style an Element</h3>
+                範例：<i class="green-text">將這句話的顏色變成綠色</i><br/>
+                作法：在style的兩個tag之間定義.green-text {color: green;} (在最前面加上一個.來做自定義的class)<br/>
+                在想要改變的tag中加上class="green-text"<br/>
+                CSS class可以同時被用在多個不同的html element上
+                <br/>
+
+                <h3>Change the Font Size of an Element</h3>
+                範例：<i class="red-30px-font">將這句話的顏色變成紅色且大小為30px</i><br/>
+                作法：使用自定義的CSS class .red-30px-font {color: red; font-size: 30px;}
+                <br/>
+
+                <h3>Set the Font Family of an Element</h3>
+                範例：將後面的字體改成 <i class="monospace-font">monospace</i><br/>
+                作法：使用自定義的CSS class .monospace-font {font-family: monospace;}
+                <br/>
+
+                <h3>Import a Google Font</h3>
+                範例：將後面的字體改成<i class="lobster-font">Lobster</i><br/>
+                作法：用link tag輸入Lobster的字體，再使用自定義的CSS class .lobster-font {font-family: Lobster;}
+                <br/>
+
+                <h3>Specify How Fonts Should Degrade</h3>
+                在style中指定字體時指定超過一個字體，若列出的字體中的第一個無法使用就會嘗試使用下一個，以此類推。<br/>
+                例如：font-family: Helvetica, monospace;
+                <br/>
+
+                <h3>Size Your Images</h3>
+                範例：將圖片的寬度指定為300px<br/>
+                <a href="#"><img src="Bean.png" alt="Bean" class="larger-image"></a><br/>
+                作法：使用自定義的CSS class .larger-image {width: 300px;}
+                <br/>
+
+                <h3>Add Borders Around Your Elements</h3>
+                範例：讓後面的字體有寬度為5px、深藍色的實線外框，且外框的角落是圓弧形 <b class="my-border">BORDER</b><br/>
+                作法：使用自定義的CSS class .my-border {border-color: darkblue; border-width: 5px; border-style: solid; border-radius: 5px;}
+
+                <h3>Make Circular Images with a border-radius</h3>
+                範例：讓圖片出現在圓形的外框中<br/>
+                <img src="Canada.png" alt="Canada" class="circular-image"><br/>
+                作法：使用自定義的CSS class .circular-image {border-color: black; border-width: 5px; border-style: dotted; border-radius: 50%;}
+                <br/>
+
+                <h3>Give a Background Color to a div Element</h3>
+                範例：
+                <div class="brown-background">
+                    讓這塊文字的背景變成咖啡色
+                </div>
+                作法：在div tag中使用自定義的CSS class .brown-background { background-color: brown;}
+                <br/>
+
+                <h3>Set the id of an Element and Use an id Attribute to Style an Element</h3>
+                範例：<span id="my-first-id">使用id將這段文字變成綠色</span>
+                作法：在style的兩個tag之間定義 #my-first-id { color: green; } (在最前面加上一個#來做自定義的id)<br/>
+                在想要改變的tag中加上id="my-first-id"<br/>
+                CSS id只能被用在一個html element上
+                <br/>
+            </p>
+
+            <p>
+                <h3>Adjust the Padding of an Element</h3>
+                <div class="yellow-box">
+                    <div class="red-box">
+                        紅色框框使用.red-box
+                    </div>
+                    <div class="blue-box">
+                        藍色框框使用.blue-box
+                    </div>
+                </div>
+
+                <h3>Adjust the Margin of an Element</h3>
+                <div class="yellow-box">
+                    <div class="red-box2">
+                        紅色框框使用.red-box2
+                    </div>
+                    <div class="blue-box2">
+                        藍色框框使用.blue-box2
+                    </div>
+                </div>
+
+                <h3>Add a Negative Margin to an Element</h3>
+                <div class="yellow-box">
+                    <div class="red-box3">
+                        紅色框框使用.red-box3
+                    </div>
+                    <div class="blue-box3">
+                        藍色框框使用.blue-box3
+                    </div>
+                </div>
+
+                <h3>Add Different Padding to Each Side of an Element</h3>
+                <div class="yellow-box">
+                    <div class="green-box">
+                        四個邊有各自的padding
+                    </div>
+                </div>
+
+                <h3>Add Different Margins to Each Side of an Element</h3>
+                <div class="yellow-box">
+                    <div class="green-box2">
+                        四個邊有各自的margin
+                    </div>
+                </div>
+
+                <h3>Use Clockwise Notation to Specify the Padding(Margin) of an Element </h3>
+                <div class="green-box3">
+                    在padding:後依序設定上右下左的padding，同樣的方法也可用於margin
+                </div>
+            </p>
+
+            <p>
+                <h3>Use Attribute Selectors to Style Elements</h3>
+                範例：讓所有type是radio的element都有20px的margin<br/>
+                <label><input name="btn" type="radio"/>1st</label>
+                <label><input name="btn" type="radio"/>2nd</label><br/>
+                作法：在style tags間定義[type='radio'] { margin: 20px; }
+                <br/>
+
+                <h3>Use Hex Code for Specific Colors</h3>
+                範例：<span style="color: #3e99d6;">使用Hex Code指定這行字的顏色為#3e99d6</span><br/>
+                作法：在element中指定style="color: #3e99d6;"
+
+                <h3>Use RGB values to Color Elements</h3>
+                範例：<span style="color: rgb(0, 255, 0);">使用RGB指定這行字的顏色為綠色</span><br/>
+                作法：在element中指定style="color: rgb(0, 255, 0);"
+            </p>
+
+            <p>
+                <h3>Use CSS Variables to change several elements at once</h3>
+                範例：見代碼中的.penguin部分，其中用--penguin-skin: black;等等指定了--penguin-skin、--penguin-belly跟--penguin-beak三個變量<br/>
+                並在指定的class中，例如.penguin-top中使用：background: var(--penguin-skin, gray);，其中gray為備用的值
+                <div class="penguin">
+                    <div class="penguin-bottom">
+                      <div class="right-hand"></div>
+                      <div class="left-hand"></div>
+                      <div class="right-feet"></div>
+                      <div class="left-feet"></div>
+                    </div>
+                    <div class="penguin-top">
+                      <div class="right-cheek"></div>
+                      <div class="left-cheek"></div>
+                      <div class="belly"></div>
+                      <div class="right-eye">
+                      </div>
+                      <div class="left-eye">
+                      </div>
+                      <div class="beak-top"></div>
+                      <div class="beak-bottom"></div>
+                    </div>
+                </div>
+            </p>
+
+            <p>
+                <h3>Create Your First CSS Grid</h3>
+                在style中定義.container，當中指定display: grid;，在將這個class使用在div tag上，一次應用到其中所有的元素
+                <div class="container">
+                    <div class="d1">1</div>
+                    <div class="d2">2</div>
+                    <div class="d3">3</div>
+                    <div class="d4">4</div>
+                    <div class="d5">5</div>
+                </div>
+
+                <h3>Add Columns with grid-template-columns</h3>
+                在.container中加入grid-template-columns:10% auto 100px 2fr;，container中就會以四個格子為一列顯示
+
+                <h3>Add Rows with grid-template-rows</h3>
+                在.container中加入grid-template-rows: 50px 50px;，container中就會分割成三個高度為50px的列
+
+                <h3>Create a Column Gap Using grid-column-gap</h3>
+                在.container中加入column-gap: 20px;，container中的各行之間就會有20px的空間
+
+                <h3>Create a Row Gap using grid-row-gap</h3>
+                在.container中加入row-gap: 5px;，container中的各列之間就會有5px的空間
+
+                <h3>Add Gaps Faster with grid-gap</h3>
+                在class中加入gap property<br/>
+                指定一個數字：將行和列的gap同時設置成該數字，例如gap: 10px<br/>
+                指定兩個數字：第一個數字為列的gap，第二個數字為行的gap，例如gap: 10px 20px<br/>
+
+                <h3>Use grid-column to Control Spacing</h3>
+                grid-column用於設置一個格子項將佔據多少橫向空間<br/>
+                grid-column property輸入兩個參數，代表左右邊界的序數<br/>
+                grid-column property的邊界的序數由左至右依序從1開始，若一個表格是3X3則最左邊為1，最右邊為4<br/>
+                範例：讓5號格子往右多佔一格<br/>
+                作法：在.d5中加入grid-column: 1 / 3;
+
+                <h3>Use grid-row to Control Spacing</h3>
+                grid-row用於設置一個格子項將佔據多少縱向空間<br/>
+                grid-row property輸入兩個參數，代表上下邊界的序數<br/>
+                grid-row property的邊界的序數由上至下依序從1開始，若一個表格是3X3則最上面為1，最下面為4<br/>
+                範例：讓5號格子往下多佔一格<br/>
+                作法：在.d5中加入grid-row: 2 / 4;
+
+                <h3>Align an Item Horizontally using justify-self</h3>
+                範例：讓3號格子縮減寬度到剛好符合內容的文字<br/>
+                作法：在.d3中加入justify-self: center;
+
+                <h3>Align an Item Vertically using align-self</h3>
+                範例：讓3號格子縮減高度到剛好符合內容的文字並置底<br/>
+                作法：在.d3中加入align-self: end;
+            </p>
+                
+            <p>
+                <h3>Align All Items Horizontally using justify-items</h3>
+                <div class="container2">
+                    <div class="item1">1</div>
+                    <div class="item2">2</div>
+                    <div class="item3">3</div>
+                    <div class="item4">4</div>
+                    <div class="item5">5</div>
+                </div>
+                範例：讓container中的所有格子都縮減寬度到剛好符合內容的文字<br/>
+                作法：在container的class(.container2)中加上justify-items: center;
+
+                <h3>Align All Items Vertically using align-items</h3>
+                範例：讓container中的所有格子都縮減高度到剛好符合內容的文字並置底<br/>
+                作法：在container的class(.container2)中加上align-items: end;
+
+                <h3>Divide the Grid Into an Area Template</h3>
+                在.container2中加上<br/>
+                grid-template-areas: <br/>
+                    "header header header"<br/>
+                    ". content content"<br/>
+                    "footer footer footer";<br/>
+                即可將3X3的所有對應位置的cell設置一個詞<br/>
+                其中若指定一個cell對應的詞為'.'則代表它是一個empty cell
+
+                <h3>Place Items in Grid Areas Using the grid-area Property</h3>
+                範例：將5號格子放置在footer的位置<br/>
+                作法：在.item5中加上grid-area: footer;
+
+                <h3>Use grid-area Without Creating an Areas Template</h3>
+                範例：不使用創建好的Areas Template，使用格子對應的邊界(座標)指定2號格子的位置<br/>
+                作法：在.item2中加上grid-area: 1/1/2/3;<br/>
+                四個數字分別代表上/左/下/右
+            </p>
+
+            <p>
+                <h3>Reduce Repetition Using the repeat Function</h3>
+                使用repeat function來重複多次property的指定<br/>
+                範例：使用repeat function來替換.container2中的grid-template-rows: 100px 50px 100px 50px;<br/>
+                作法：改寫成grid-template-rows: repeat(2, 100px 50px);
+
+                <h3>Limit Item Size Using the minmax Function</h3>
+                範例：使用minmax function指定container中格子的寬度在一定範圍內縮放
+                作法：改寫grid-template-columns: repeat(3, 100px);成grid-template-columns: repeat(3, minmax(90px, 120px));
+
+                <h3>Create Flexible Layouts Using auto-fill</h3>
+                讓html自動填滿欄數，而不是指定特定的欄數<br/>
+                範例：將grid-template-columns: repeat(3, minmax(90px, 120px));中的reapeat function改成repeat(auto-fill), minmax(90px, 120px))
+
+                <h3>Create Flexible Layouts Using auto-fit</h3>
+                效果同auto-fill，差別在於auto-fit一定會讓橫向的空間填滿
+
+                <h3>Use Media Queries to Create Responsive Layouts</h3>
+                <div class="container3">
+                    <div class="item6">header</div>
+                    <div class="item7">advert</div>
+                    <div class="item8">
+                        <div class="itemOne">paragraph1</div>
+                        <div class="itemTwo">paragraph2</div>
+                    </div>
+                    <div class="item9">footer</div>
+                </div>
+                在.container3中定義預設為<br/>
+                grid-template-areas: <br/>
+                    "header"<br/>
+                    "advert"<br/>
+                    "content"<br/>
+                    "footer";<br/>
+                另外用Media Queries來定義寬度超過1000px以上時的配置<br/>
+                @media (min-width: 1000px) {<br/>
+                    .container3 {<br/>
+                        grid-template-columns: auto 1fr;<br/>
+                        grid-template-rows: auto 1fr auto;<br/>
+                        grid-template-areas: <br/>
+                            "advert header"<br/>
+                            "advert content"<br/>
+                            "advert footer";<br/>
+                    }<br/>
+                }
+
+                <h3>Create Grids within Grids</h3>
+                範例：把.item8做成grid<br/>
+                作法：在.item8中加上display: grid; 和 grid-template-columns: auto 1fr; 並在使用.item8的element中加入新的element
+            </p>
+
+            <p>
+                <h3>Use display: flex to Position Two Boxes</h3>
+                <div id="box-container">
+                    <div id="box-1"></div>
+                    <div id="box-2"></div>
+                </div>
+                範例：讓兩個box根據視窗大小自動縮放並排<br/>
+                作法：在#box-container中指定display: flex;，使其成為一個flex container
+
+                <h3>Add Flex Superpowers to the Tweet Embed</h3>
+                在一個區塊內的所有元素都加上display: flex;使他們整齊排列
+
+                <h3>Use the flex-direction Property to Make a Row</h3>
+                display: flex;預設會讓container內的元素由左至右排序<br/>
+                可以加上flex-direction: (方向);來改變排序方向<br/>
+                方向可以是row(預設)、row-reverse、column、column-reverse等<br/>
+
+                <h3>Use the flex-direction Property to Make a Column</h3>
+                使用flex-direction: column;
+
+                <h3>Align Elements Using the justify-content Property</h3>
+                <img src="flex-container.png" width="50%"/><br/>
+                範例：將container中的element根據main axis置中對齊<br/>
+                作法：在#box-container中指定justify-content: center;                
+
+                <h3>Align Elements Using the align-items Property</h3>
+                範例：將container中的element根據cross axis置中對齊<br/>
+                作法：在#box-container中指定align-items: center;
+
+                <h3>Use the flex-wrap Property to Wrap a Row or Column</h3>
+                <div id="box-container2">
+                    <div id="box-3"></div>
+                    <div id="box-4"></div>
+                    <div id="box-5"></div>
+                    <div id="box-6"></div>
+                    <div id="box-7"></div>
+                    <div id="box-8"></div>
+                </div>
+                在.box-container2中加入flex-wrap: wrap;讓其中的物件會自動換行
+
+                <h3>Use the flex-shrink Property to Shrink Items</h3>
+                在element的id(例如#box-1)中加上flex-shrink: (比例);來指定各個元素收縮的比例
+
+                <h3>Use the flex-grow Property to Expand Items</h3>
+                在element的id(例如#box-1)中加上flex-grow: (比例);來指定各個元素擴張的比例
+
+                <h3>Use the flex-basis Property to Set the Initial Size of an Item</h3>
+                使用flex-basis設置flex-shrink或flex-grow處理以前的初始大小<br/>
+                例如：flex-basis: 20em;
+
+                <h3>Use the flex Shorthand Property</h3>
+                使用精簡版的property flex來一次設置flex-shrink、flex-grow及flex-basis<br/>
+                例如：flex: 2 1 150px; 其中三個數字分別為flex-shrink、flex-grow及flex-basis
+
+                <h3>Use the order Property to Rearrange Items</h3>
+                使用order重新排序element在container中的順序，例如order: 2; 或order: 1;
+
+                <h3>Use the align-self Property</h3>
+                與align-items不同，align-self用於各自的item<br/>
+                範例：讓使用#box-2的elememt置中<br/>
+                作法：在#box-2加入align-self: center;
+            </p>
+
+            <p>
+                <a href="index.html"><h3>Back</h3></a>
+            </p>
+        </main>    
+    </body>
+</html>
