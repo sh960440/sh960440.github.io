@@ -1,1 +1,1 @@
-# sh960440.github.io
+# Samuel's Study Notes
