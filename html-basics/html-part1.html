@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML Basics Part 1">
+        <meta name="author" content="Shun-min Hsieh">
+        <meta name="keywords" content="HTML, basic, note">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Basics - 1</title>
+    </head>
+    <body>
+        <style>
+            .header-container {
+                width: 50%;
+                display: grid;
+                text-align: center;
+                grid-template-columns: repeat(7, auto);
+                grid-template-rows: 25px 80px;
+                gap: 5px;
+            }
+            .header-tag {
+                background: lightskyblue;
+                vertical-align: middle;
+            }
+        </style>
+
+        <header>
+            <h1 style="text-align: center">HTML Basics - 1</h1>
+            <hr/><hr/>
+        </header>
+
+        <main>
+            <h2>通用概念</h2>
+            <ul>
+                <li>同時有Opening tag跟Closing tag的tag叫做Content(Container) tag</li>
+                <ul>
+                    <li>範例：html、body、h1、h2、h3、p</li>
+                </ul>
+                <li>使用時只需要一個tag，不需要分Opening tag跟Closing tag的叫做Non-container tag</li>
+                <ul>
+                    <li>範例：image、br</li>
+                </ul>
+            </ul>
+
+            
+            <h2>常用Tag</h2>
+            <h3>!DOCTYPE</h3>
+            用途：定義文檔的類型
+
+            <h3>html</h3>
+            用途：定義html的內容，在這個tag之間的內容皆為html
+            
+            <h3>head</h3>
+            用途：定義關於文檔的資訊，通常在body tag的上面
+
+            <h3>title</h3>
+            用途：定義文檔的標題，標題即為瀏覽器分頁上看到的網頁名稱，通常在head tag當中
+
+            <h3>body</h3>
+            用途：指定文檔的主體，通常在head tag的下面
+
+            <h3>header</h3>
+            用途：指定文檔的頂部部分，通常在body tag當中，main tag上面
+
+            <h3>main</h3>
+            用途：指定文檔的主體部分，通常在body tag當中，main tag和footer tag之間
+
+            <h3>footer</h3>
+            用途：指定文檔的底部部分，通常在body tag當中，main tag下面
+
+            <h3>br/</h3>
+            用途：換行
+
+            <h3>hr/</h3>
+            用途：顯示一條水平分割線
+
+            <h3>p</h3>
+            用途：定義一個段落
+
+            <h3>h1 / h2 / h3 / h4 / h5 / h6</h3>
+            用途：顯示h1~h6大小的標題
+
+            <div class="header-container">
+                <div class="header-tag">Tag名稱</div>
+                <div class="header-tag">h1</div>
+                <div class="header-tag">h2</div>
+                <div class="header-tag">h3</div>
+                <div class="header-tag">h4</div>
+                <div class="header-tag">h5</div>
+                <div class="header-tag">h6</div>
+                <div class="header-tag">範例</div>
+                <div class="header-tag"><h1>Title</h1></div>
+                <div class="header-tag"><h2>Title</h2></div>
+                <div class="header-tag"><h3>Title</h3></div>
+                <div class="header-tag"><h4>Title</h4></div>
+                <div class="header-tag"><h5>Title</h5></div>
+                <div class="header-tag"><h6>Title</h6></div>                
+            </div>
+            <hr/>
+            
+            <h2>格式相關Tag</h2>
+            <h3>b</h3>
+            用途：粗體字<br/>
+            範例：<b>將這段文字變成粗體</b>
+
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <del>帶刪除線的文字</del>
+            <ins>被插入的文字</ins>
+            <kbd>鍵盤文字</kbd>
+            
+        </main>
+
+        <footer>
+            <hr/>
+            <a href="index.html"><h3>Homepage(Doesn't Work For Now)</h3></a>
+        </footer>
+    </body>
+</html>
