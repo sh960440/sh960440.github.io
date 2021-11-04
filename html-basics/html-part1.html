@@ -40,9 +40,13 @@
                 <ul>
                     <li>範例：image、br</li>
                 </ul>
+                <li>HTML的Tag根據所占空間大致分為兩種</li>
+                <ol>
+                    <li>Block Level Element: 佔據一整列的空間，接在後面的文本將會自動從下一行開始，例如h1、li、ul、p、table、div</li>
+                    <li>Inline Element: 只佔據文本內容的大小，接在後面的文本將不會自動換行，例如b、em、a、img、input</li>
+                </ol>
             </ul>
 
-            
             <h2>常用Tag</h2>
             <h3>!DOCTYPE</h3>
             用途：定義文檔的類型
@@ -99,27 +103,63 @@
             <hr/>
             
             <h2>格式相關Tag</h2>
-            <h3>b</h3>
-            用途：粗體字<br/>
+            <h3>b / strong</h3>
+            用途：粗體字。b或stronng都會讓內容的文字變成粗體字，差別在於b是樣式標籤，純粹改變字體樣式，而strong是語意標籤，代表內容具有重要性<br/>
             範例：<b>將這段文字變成粗體</b>
 
-            <h3>i</h3>
-            用途：斜體字<br/>
+            <h3>i / em / var</h3>
+            用途：斜體字。i、em或var都會讓內容的文字變成斜體字，差別在於i是樣式標籤，純粹改變字體樣式，em和var是語意標籤，em有強調文字內容的意義，而var代表變量<br/>
             範例：<i>將這段文字變成斜體</i>
 
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-            <del>帶刪除線的文字</del>
-            <ins>被插入的文字</ins>
-            <kbd>鍵盤文字</kbd>
-            
+            <h3>u / ins</h3>
+            用途：帶底線的文字。u或ins都會讓內容的文字加上底線，差別在於u純粹改變字體樣式，而ins通常與del一起使用，代表刪除舊文本後插入更新的文本<br/>
+            範例：<u>將這段文字加上底線</u>
+
+            <h3>del / s</h3>
+            用途：帶刪除線的文字。del或s都會讓內容的文字加上刪除線<br/>
+            範例：<del>將這段文字加上刪除線</del>
+
+            <h3>mark</h3>
+            用途：帶有底色記號的文字<br/>
+            範例：<mark>將這段文字加上底色</mark>
+
+            <h3>small</h3>
+            用途：小型字<br/>
+            範例：<small>將這段文字變成小型字</small>
+
+            <h3>q</h3>
+            用途：定義短引用文字，在文字的兩側加上引號<br/>
+            範例：<q>將這段文字變成引用文字</q>
+
+            <h3>sub</h3>
+            用途：下標文字<br/>
+            範例：用下標文字表示化學式H<sub>2</sub>O
+
+            <h3>sup</h3>
+            用途：上標文字<br/>
+            範例：用上標文字表示2的10次方2<sup>10</sup>
+
+            <h3>pre</h3>
+            用途：定義預格式化的一段文字，在代碼中，pre元素內的空格或換行都會顯示在網頁上，而字體會呈現等寬體<br/>
+            範例：
+            <pre>        顯示一段的預格式文本
+        不需要使用br/就能換行
+        也能保留   空白</pre>
+            註記：和p一樣，pre是一個block level element
+
+            <h3>progress</h3>
+            用途：顯示進度條<br/>
+            屬性：
+            <ul>
+                <li>max: 完成全滿需要的值</li>
+                <li>value: 目前進度的值</li>
+            </ul>
+            範例：顯示半滿的進度條<progress max="100" value="50">任務進度</progress>
         </main>
 
         <footer>
             <hr/>
-            <a href="index.html"><h3>Homepage(Doesn't Work For Now)</h3></a>
+            <a href="../index.html"><h3>Homepage</h3></a>
         </footer>
     </body>
 </html>
