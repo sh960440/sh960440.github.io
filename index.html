@@ -1,17 +1,18 @@
-<!DOCTYPE html> <!-- 告訴瀏覽器這個文件的類型是html -->
-<html> <!-- 同時有Starting tag跟Ending tag的tag叫做Container tags -->
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="UTF-8"> <!-- meta tag: 用於定義有關檔案資訊的tag，此處用來定義網頁的字符編碼 -->
-        <meta name="description" content="This is my first html website"> <!-- 定義網頁的描述，以便瀏覽器或Google搜尋等使用。name和content等稱為attribute或property -->
-        <meta name="author" content="Samuel">
-        <meta name="keywords" content="HTML, beginner, notes">
+        <meta charset="UTF-8">
+        <meta name="description" content="My Website">
+        <meta name="author" content="Shun-min Hsieh">
+        <meta name="keywords" content="HTML, CSS, beginner, notes">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Samuel's Website</title> <!-- title tag: 定義網頁分頁上顯示的標題-->
+        <title>Hi! I'm Samule!</title>
     </head>
     <body>
-        <!-- HTML檔案(也就是一個網頁)通常包含了header、main、footer三個部分 -->
         <header>
-            <nav> <!-- nav: 用於navigational elements -->
+            <h1 style="text-align: center">Samuel's Website</h1>
+            <hr/><hr/>
+            <nav>
 
             </nav>
         </header>
@@ -19,7 +20,7 @@
         <main>
             <article>
                 <section>
-                    <aside> <!-- aside: 次要的內容，與主要內容分開但間接相關，通常在側邊欄中表示 -->
+                    <aside>
 
                     </aside>
                 </section>
@@ -30,28 +31,14 @@
 
         </footer>
 
-        <h1>Samuel's Website</h1> <!-- h1到h6: 六種大小的heading tag-->
-        <br/> <!-- br/: line break，換行 -->
-        <hr/> <!-- hr/: 水平分隔線 -->
-        <p> <!-- p: 囊括一個段落的tag -->
-            <i>This</i> is my <b>first paragraph</b> <!-- i:斜體 b: 粗體 -->
-        </p>
-        <p>
-            <big>This</big> <small>is</small> my second paragraph <!-- big: 讓字體稍微變大 small: 讓字體稍微變小 -->
-        </p>
-        <p>
-            10<sup>2</sup> H<sub>2</sub>O <!-- sub: 賦予文字subscripted的效果 sup: 賦予文字superscripted的效果 -->
-        </p>
-        <h2 style="color:blue">Style and Colors</h2>
-        <p style="color:darkgreen; background-color: goldenrod;"> <!-- style attribute用來改變文字的style，例如顏色 -->
-            You can style your HTML and make it look pretty
-        </p>
         <p>
             <a href="https://www.google.com" target="_blank"><h3>Bring me to Google</h3></a> <!-- a: 用於超連結，tag之間的文字為顯示的文字，href attribute指明網址，target attribute指明打開網址的方式 -->
             <br/>
             <a href="Page1.html" target="_blank"><h3>Bring me to Page 1</h3></a>
             <br/>
             <a href="html-basics/html-part1.html" target="_blank"><h3>Bring me to HTML basics 1</h3></a>
+            <br/>
+            <a href="html-basics/html-part2.html" target="_blank"><h3>Bring me to HTML basics 2</h3></a>
             <br/>
             <a href="CSSNote.html"><h3>Bring me to CSS notes</h3></a>
             <a href="Bean.png">Bean</a>
@@ -73,7 +60,7 @@
             <video src="Video.mp4" poster="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d" controls width="500"></video>
             <video src="Video.mp4" loop autoplay controls width="500"></video>
             <br/>
-            <iframe width="1120" height="630" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
         <p>
             <h4>Lists</h4>

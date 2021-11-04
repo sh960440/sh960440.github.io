@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!-- 告訴瀏覽器這個文件的類型是html -->
+<html> <!-- 同時有Starting tag跟Ending tag的tag叫做Container tags -->
     <head>
         <meta charset="UTF-8"> <!-- meta tag: 用於定義有關檔案資訊的tag，此處用來定義網頁的字符編碼 -->
         <meta name="description" content="This is my first html website"> <!-- 定義網頁的描述，以便瀏覽器或Google搜尋等使用。name和content等稱為attribute或property -->
         <meta name="author" content="Samuel">
         <meta name="keywords" content="HTML, beginner, notes">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Samuel's Website</title>
+        <title>Samuel's Website</title> <!-- title tag: 定義網頁分頁上顯示的標題-->
     </head>
     <body>
+        <!-- HTML檔案(也就是一個網頁)通常包含了header、main、footer三個部分 -->
         <header>
             <nav> <!-- nav: 用於navigational elements -->
 
@@ -25,6 +26,22 @@
             </article>
         </main>
 
+        <footer>
+
+        </footer>
+
+        <h1>Samuel's Website</h1> <!-- h1到h6: 六種大小的heading tag-->
+        <br/> <!-- br/: line break，換行 -->
+        <hr/> <!-- hr/: 水平分隔線 -->
+        <p> <!-- p: 囊括一個段落的tag -->
+            <i>This</i> is my <b>first paragraph</b> <!-- i:斜體 b: 粗體 -->
+        </p>
+        <p>
+            <big>This</big> <small>is</small> my second paragraph <!-- big: 讓字體稍微變大 small: 讓字體稍微變小 -->
+        </p>
+        <p>
+            10<sup>2</sup> H<sub>2</sub>O <!-- sub: 賦予文字subscripted的效果 sup: 賦予文字superscripted的效果 -->
+        </p>
         <h2 style="color:blue">Style and Colors</h2>
         <p style="color:darkgreen; background-color: goldenrod;"> <!-- style attribute用來改變文字的style，例如顏色 -->
             You can style your HTML and make it look pretty
@@ -36,9 +53,20 @@
             <br/>
             <a href="html-basics/html-part1.html" target="_blank"><h3>Bring me to HTML basics 1</h3></a>
             <br/>
+            <a href="html-basics/html-part2.html" target="_blank"><h3>Bring me to HTML basics 2</h3></a>
+            <br/>
             <a href="CSSNote.html"><h3>Bring me to CSS notes</h3></a>
             <a href="Bean.png">Bean</a>
+        </p>
+        <p>
+            <h4>Image</h4>
+            <!-- img: 圖片，scr是圖片的位置，alt是圖片的替代文字，width為寬度，height為高度-->
+            <!-- 只指定寬度或高度時，html會自動依比例調整未指定的高度或寬度 -->
+            <img src="https://storage.googleapis.com/petsmao-images/images/2020/08/f33b6ab8-1597036990-949ef6aa73a2f52d225652f1bb15828c-1024x682.jpg" alt="Cat" height="100" />
+            <img src="Bean.png" alt="Bean" width="100" height="100" />
+
             <h5>點下面的圖片進入Page2</h5>
+            <!-- 組合連結與圖片 -->
             <a href="dir/Page2.html"><img src="Bean.png" alt="Bean" width="50" height="50" /></a>
         </p>
         <p>

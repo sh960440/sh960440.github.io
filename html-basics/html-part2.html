@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML Basics Part 2">
+        <meta name="author" content="Shun-min Hsieh">
+        <meta name="keywords" content="HTML, basic, note">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Basics - 2</title>
+    </head>
+    <body style="background-color: cadetblue;">
+        <style>
+            .body-separator {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto;
+                gap: 5px;
+            }
+            .sorting-title {
+                color: maroon;
+            }
+            .header-and-footer {
+                background-color: wheat;
+                border-width: 5px;
+                border-radius: 10px;
+            }
+        </style>
+
+        <header class="header-and-footer">
+            <h1 style="text-align: center">HTML Basics - 待輸入內容</h1>
+        </header>
+
+        <main>
+            <h2 class="sorting-title">Image Tags</h2>
+            <h3>img</h3>
+            用途：加入圖片<br/>
+            屬性：
+            <ul>
+                <li>src: 路徑。可以是目錄中的檔案或是網路上圖片的網址</li>
+                <li>width: 寬度。若只有指定寬度時則會自動依比例調整高度</li>
+                <li>height: 高度。若只有指定高度時則會自動依比例調整寬度</li>
+                <li>alt: 圖片的替代文字，用於圖片無法正常顯示時</li>
+                <li>title: 圖片的標題，滑鼠停在圖片上時顯示的文字</li>
+            </ul>
+            範例：從目錄中取得一張圖片，將其高度設置為100px<br/>
+            <img src="../images/Taiwan.png" alt="Taiwan" title="This is Taiwan" height="100"/><br/>
+            範例：從網路上取得一張圖片，將其高度設置為100px<br/>
+            <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-Canada.png" alt="Canada" title="This is Canada" height="100"/>
+
+            <hr/>
+
+            <h2 class="sorting-title">Audio / Video Tags</h2>
+            <h3>audio</h3>
+            用途：加入音訊檔<br/>
+            屬性：
+            <ul>
+                <li>src: 路徑</li>
+                <li>autoplay: 自動播放</li>
+                <li>controls: 顯示控制介面</li>
+                <li>loop: 循環播放</li>
+                <li>muted: 靜音</li>
+            </ul>
+            範例：從目錄中取得音訊檔，顯示控制介面，預設其為靜音，並開啟循環播放<br/>
+            <audio src="../audio/correct-answer.mp3" muted controls loop>Correct Answer</audio>
+
+            <h3>source</h3>
+            <h3>track</h3>
+            <h3>video</h3>
+
+            <hr/>
+
+            <h2 class="sorting-title">Link Tags</h2>
+
+        </main>
+
+        <footer class="header-and-footer">
+            <a href="https://www.w3schools.com/TAGS/ref_byfunc.asp"><h3>References(English))</h3></a>
+            <a href="http://web.thu.edu.tw/hzed/www/tag.htm"><h3>References(Traditional Chinese)</h3></a>
+            <a href="https://www.runoob.com/tags/ref-byfunc.html"><h3>References(Simplified Chinese)</h3></a>
+            <a href="../index.html"><h3>Homepage</h3></a>
+        </footer>
+    </body>
+</html>

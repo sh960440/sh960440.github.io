@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Basics - 1</title>
     </head>
-    <body>
+    <body style="background-color: cadetblue;">
         <style>
             .header-container {
                 width: 50%;
@@ -22,15 +22,29 @@
                 background: lightskyblue;
                 vertical-align: middle;
             }
+            .body-separator {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto;
+                gap: 5px;
+            }
+            .sorting-title {
+                color: maroon;
+            }
+            .header-and-footer {
+                background-color: wheat;
+                border-width: 5px;
+                border-radius: 10px;
+            }
         </style>
 
-        <header>
-            <h1 style="text-align: center">HTML Basics - 1</h1>
-            <hr/><hr/>
+        <header class="header-and-footer">
+            <h1 style="text-align: center">HTML Basics - Basic Concepts / Basic HTML Tags / Formatting Tags</h1>
         </header>
 
         <main>
-            <h2>通用概念</h2>
+            <h2 class="sorting-title">通用概念</h2>
             <ul>
                 <li>同時有Opening tag跟Closing tag的tag叫做Content(Container) tag</li>
                 <ul>
@@ -47,118 +61,125 @@
                 </ol>
             </ul>
 
-            <h2>常用Tag</h2>
-            <h3>!DOCTYPE</h3>
-            用途：定義文檔的類型
+            <div class="body-separator">
+                <div>
+                    <h2 class="sorting-title">Basic HTML Tags</h2>
+                    <h3>!DOCTYPE</h3>
+                    用途：定義文檔的類型
+        
+                    <h3>html</h3>
+                    用途：定義html的內容，在這個tag之間的內容皆為html
+                    
+                    <h3>head</h3>
+                    用途：定義關於文檔的資訊，通常在body tag的上面
+        
+                    <h3>title</h3>
+                    用途：定義文檔的標題，標題即為瀏覽器分頁上看到的網頁名稱，通常在head tag當中
+        
+                    <h3>body</h3>
+                    用途：指定文檔的主體，通常在head tag的下面
+        
+                    <h3>header</h3>
+                    用途：指定文檔的頂部部分，通常在body tag當中，main tag上面
+        
+                    <h3>main</h3>
+                    用途：指定文檔的主體部分，通常在body tag當中，main tag和footer tag之間
+        
+                    <h3>footer</h3>
+                    用途：指定文檔的底部部分，通常在body tag當中，main tag下面
+        
+                    <h3>br/</h3>
+                    用途：換行
+        
+                    <h3>hr/</h3>
+                    用途：顯示一條水平分割線
+        
+                    <h3>p</h3>
+                    用途：定義一個段落
+        
+                    <h3>h1 / h2 / h3 / h4 / h5 / h6</h3>
+                    用途：顯示h1~h6大小的標題
+        
+                    <div class="header-container">
+                        <div class="header-tag">Tag名稱</div>
+                        <div class="header-tag">h1</div>
+                        <div class="header-tag">h2</div>
+                        <div class="header-tag">h3</div>
+                        <div class="header-tag">h4</div>
+                        <div class="header-tag">h5</div>
+                        <div class="header-tag">h6</div>
+                        <div class="header-tag">範例</div>
+                        <div class="header-tag"><h1>Title</h1></div>
+                        <div class="header-tag"><h2>Title</h2></div>
+                        <div class="header-tag"><h3>Title</h3></div>
+                        <div class="header-tag"><h4>Title</h4></div>
+                        <div class="header-tag"><h5>Title</h5></div>
+                        <div class="header-tag"><h6>Title</h6></div>                
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2 class="sorting-title">Formatting Tags</h2>
+                    <h3>b / strong</h3>
+                    用途：粗體字。b或stronng都會讓內容的文字變成粗體字，差別在於b是樣式標籤，純粹改變字體樣式，而strong是語意標籤，代表內容具有重要性<br/>
+                    範例：<b>將這段文字變成粗體</b>
 
-            <h3>html</h3>
-            用途：定義html的內容，在這個tag之間的內容皆為html
-            
-            <h3>head</h3>
-            用途：定義關於文檔的資訊，通常在body tag的上面
+                    <h3>i / em / var</h3>
+                    用途：斜體字。i、em或var都會讓內容的文字變成斜體字，差別在於i是樣式標籤，純粹改變字體樣式，em和var是語意標籤，em有強調文字內容的意義，而var代表變量<br/>
+                    範例：<i>將這段文字變成斜體</i>
 
-            <h3>title</h3>
-            用途：定義文檔的標題，標題即為瀏覽器分頁上看到的網頁名稱，通常在head tag當中
+                    <h3>u / ins</h3>
+                    用途：帶底線的文字。u或ins都會讓內容的文字加上底線，差別在於u純粹改變字體樣式，而ins通常與del一起使用，代表刪除舊文本後插入更新的文本<br/>
+                    範例：<u>將這段文字加上底線</u>
 
-            <h3>body</h3>
-            用途：指定文檔的主體，通常在head tag的下面
+                    <h3>del / s</h3>
+                    用途：帶刪除線的文字。del或s都會讓內容的文字加上刪除線<br/>
+                    範例：<del>將這段文字加上刪除線</del>
 
-            <h3>header</h3>
-            用途：指定文檔的頂部部分，通常在body tag當中，main tag上面
+                    <h3>mark</h3>
+                    用途：帶有底色記號的文字<br/>
+                    範例：<mark>將這段文字加上底色</mark>
 
-            <h3>main</h3>
-            用途：指定文檔的主體部分，通常在body tag當中，main tag和footer tag之間
+                    <h3>small</h3>
+                    用途：小型字<br/>
+                    範例：<small>將這段文字變成小型字</small>
 
-            <h3>footer</h3>
-            用途：指定文檔的底部部分，通常在body tag當中，main tag下面
+                    <h3>q</h3>
+                    用途：定義短引用文字，在文字的兩側加上引號<br/>
+                    範例：<q>將這段文字變成引用文字</q>
 
-            <h3>br/</h3>
-            用途：換行
+                    <h3>sub</h3>
+                    用途：下標文字<br/>
+                    範例：用下標文字表示化學式H<sub>2</sub>O
 
-            <h3>hr/</h3>
-            用途：顯示一條水平分割線
+                    <h3>sup</h3>
+                    用途：上標文字<br/>
+                    範例：用上標文字表示2的10次方2<sup>10</sup>
 
-            <h3>p</h3>
-            用途：定義一個段落
-
-            <h3>h1 / h2 / h3 / h4 / h5 / h6</h3>
-            用途：顯示h1~h6大小的標題
-
-            <div class="header-container">
-                <div class="header-tag">Tag名稱</div>
-                <div class="header-tag">h1</div>
-                <div class="header-tag">h2</div>
-                <div class="header-tag">h3</div>
-                <div class="header-tag">h4</div>
-                <div class="header-tag">h5</div>
-                <div class="header-tag">h6</div>
-                <div class="header-tag">範例</div>
-                <div class="header-tag"><h1>Title</h1></div>
-                <div class="header-tag"><h2>Title</h2></div>
-                <div class="header-tag"><h3>Title</h3></div>
-                <div class="header-tag"><h4>Title</h4></div>
-                <div class="header-tag"><h5>Title</h5></div>
-                <div class="header-tag"><h6>Title</h6></div>                
-            </div>
-            <hr/>
-            
-            <h2>格式相關Tag</h2>
-            <h3>b / strong</h3>
-            用途：粗體字。b或stronng都會讓內容的文字變成粗體字，差別在於b是樣式標籤，純粹改變字體樣式，而strong是語意標籤，代表內容具有重要性<br/>
-            範例：<b>將這段文字變成粗體</b>
-
-            <h3>i / em / var</h3>
-            用途：斜體字。i、em或var都會讓內容的文字變成斜體字，差別在於i是樣式標籤，純粹改變字體樣式，em和var是語意標籤，em有強調文字內容的意義，而var代表變量<br/>
-            範例：<i>將這段文字變成斜體</i>
-
-            <h3>u / ins</h3>
-            用途：帶底線的文字。u或ins都會讓內容的文字加上底線，差別在於u純粹改變字體樣式，而ins通常與del一起使用，代表刪除舊文本後插入更新的文本<br/>
-            範例：<u>將這段文字加上底線</u>
-
-            <h3>del / s</h3>
-            用途：帶刪除線的文字。del或s都會讓內容的文字加上刪除線<br/>
-            範例：<del>將這段文字加上刪除線</del>
-
-            <h3>mark</h3>
-            用途：帶有底色記號的文字<br/>
-            範例：<mark>將這段文字加上底色</mark>
-
-            <h3>small</h3>
-            用途：小型字<br/>
-            範例：<small>將這段文字變成小型字</small>
-
-            <h3>q</h3>
-            用途：定義短引用文字，在文字的兩側加上引號<br/>
-            範例：<q>將這段文字變成引用文字</q>
-
-            <h3>sub</h3>
-            用途：下標文字<br/>
-            範例：用下標文字表示化學式H<sub>2</sub>O
-
-            <h3>sup</h3>
-            用途：上標文字<br/>
-            範例：用上標文字表示2的10次方2<sup>10</sup>
-
-            <h3>pre</h3>
-            用途：定義預格式化的一段文字，在代碼中，pre元素內的空格或換行都會顯示在網頁上，而字體會呈現等寬體<br/>
-            範例：
-            <pre>        顯示一段的預格式文本
+                    <h3>pre</h3>
+                    用途：定義預格式化的一段文字，在代碼中，pre元素內的空格或換行都會顯示在網頁上，而字體會呈現等寬體<br/>
+                    範例：
+                    <pre>        顯示一段的預格式文本
         不需要使用br/就能換行
         也能保留   空白</pre>
-            註記：和p一樣，pre是一個block level element
+                    註記：和p一樣，pre是一個block level element
 
-            <h3>progress</h3>
-            用途：顯示進度條<br/>
-            屬性：
-            <ul>
-                <li>max: 完成全滿需要的值</li>
-                <li>value: 目前進度的值</li>
-            </ul>
-            範例：顯示半滿的進度條<progress max="100" value="50">任務進度</progress>
+                    <h3>progress</h3>
+                    用途：顯示進度條<br/>
+                    屬性：
+                    <ul>
+                        <li>max: 完成全滿需要的值</li>
+                        <li>value: 目前進度的值</li>
+                    </ul>
+                    範例：顯示半滿的進度條<progress max="100" value="50">任務進度</progress>
+                </div>
+            </div>
         </main>
 
-        <footer>
-            <hr/>
+        <footer class="header-and-footer">
+            <a href="https://www.w3schools.com/TAGS/ref_byfunc.asp"><h3>References(English))</h3></a>
+            <a href="http://web.thu.edu.tw/hzed/www/tag.htm"><h3>References(Traditional Chinese)</h3></a>
+            <a href="https://www.runoob.com/tags/ref-byfunc.html"><h3>References(Simplified Chinese)</h3></a>
             <a href="../index.html"><h3>Homepage</h3></a>
         </footer>
     </body>
