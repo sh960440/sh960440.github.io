@@ -28,37 +28,238 @@
         </style>
 
         <header class="header-and-footer">
-            <h1 style="text-align: center">HTML Basics - 待輸入內容</h1>
+            <h1 style="text-align: center">HTML Basics - Form / Input / Style / Semantics / Meta Info</h1>
         </header>
 
         <main>
             <div class="body-separator">
                 <div>
-                    <h2 class="sorting-title">表格</h2>
-                    <h3>&lt表格&gt</h3>
-                    用途：<br/>
+                    <h2 class="sorting-title">Forms and Input</h2>
+                    <h3>&ltform&gt</h3>
+                    用途：創建供用戶輸入的HTML表單，可包含&ltinput&gt、&lttextarea&gt、&ltbutton&gt、&ltselect&gt、&ltoption&gt、&ltoptgroup&gt、&ltfieldset&gt、&ltlabel&gt<br/>
                     屬性：
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>action: 指定當提交表單時向何處發送表單數據</li>
+                        <li>autocomplete: 指定是否啟用表單的自動完成功能</li>
+                        <li>method: 指定用於發送表單數據的 HTTP 方法</li>
+                        <li>target: 指定在何處打開 action URL</li>
                     </ul>
-                    範例：<br/>
-                    
+
+                    <h3>&ltinput&gt</h3>
+                    用途：讓使用者可以在其中輸入資訊<br/>
+                    屬性：
+                    <ul>
+                        <li>accept: 指定通過檔案上傳來提交的檔案類型。(只針對type="file")</li>
+                        <li>alt: 定義圖片輸入的替代文字。(只針對type="image")</li>
+                        <li>checked: 指定在頁面載入時應該被預先選取的&ltinput&gt元素。(只針對 type="checkbox" 或者 type="radio")</li>
+                        <li>disabled: 指定禁用的&ltinput&gt元素</li>
+                        <li>height: 指定&ltinput&gt元素的高度。 (只針對type="image")</li>
+                        <li>max: 指定&ltinput&gt元素的最大值</li>
+                        <li>min: 指定&ltinput&gt元素的最小值</li>
+                        <li>maxlength: 指定&ltinput&gt元素中允許的最大字元數</li>
+                        <li>name: 指定&ltinput&gt元素的名稱</li>
+                        <li>placeholder: 指定可描述輸入&ltinput&gt字段預期值的簡短的提示</li>
+                        <li>readonly: 指定輸入字段是唯讀的</li>
+                        <li>required: 指定必需在提交表單之前填寫輸入字段</li>
+                        <li>size: 以字元數計的&ltinput&gt元素的可見寬度</li>
+                        <li>src: 指定顯示為提交按鈕的圖片的URL。(只針對 type="image")</li>
+                        <li>value: 指定&ltinput&gt元素 value 的值</li>
+                        <li>width: 指定&ltinput&gt元素的寬度。(只針對type="image")</li>
+                        <li>type: 指定要顯示的&ltinput&gt元元素的類型，包括</li>
+                        <ul>
+                            <li>button: <input type="button" value="Click Me"/></li>
+                            <li>checkbox: <input type="checkbox" checked/></li>
+                            <li>color: <input type="color"/></li>
+                            <li>date: <input type="date"/></li>
+                            <li>datetime: <input type="datetime"/></li>
+                            <li>datetime-local: <input type="datetime-local"/></li>
+                            <li>email: <input type="email"/></li>
+                            <li>file: <input type="file"/></li>
+                            <li>image: <input type="image"/></li>
+                            <li>month: <input type="month"/></li>
+                            <li>number: <input type="number"/></li>
+                            <li>password: <input type="password"/></li>
+                            <li>radio: <input type="radio"/></li>
+                            <li>range: <input type="range"/></li>
+                            <li>reset: <input type="reset"/></li>
+                            <li>search: <input type="search"/></li>
+                            <li>submit: <input type="submit"/></li>
+                            <li>tel: <input type="tel"/></li>
+                            <li>text: <input type="text" size="5" maxlength="10" value="default"/></li>
+                            <li>time: <input type="time"/></li>
+                            <li>url: <input type="url"/></li>
+                            <li>week: <input type="week"/></li>
+                        </ul>
+                    </ul>
+                    範例：一系列的單選選項(同時只有一個能被選取)<br/>
+                    <input name="btn" type="radio"/>
+                    <input name="btn" type="radio"/>
+                    <input name="btn" type="radio"/>
+
+
+                    <h3>&lttextarea&gt</h3>
+                    用途：定義一個多行的文字輸入區<br/>
+                    屬性：
+                    <ul>
+                        <li>cols: 指定文字區域內可見的寬度</li>
+                        <li>rows: 指定文字區域內可見的行數</li>
+                        <li>disabled: 指定禁用文字區域</li>
+                        <li>form: 定義文字區域所屬的一個或多個表單</li>
+                        <li>maxlength: 指定文字區域允許的最大字元數</li>
+                        <li>name: 文字區域的名稱</li>
+                        <li>placeholder: 一個簡短的提示，描述文字區域期望的輸入值</li>
+                        <li>readonly: 指定文字區域為唯讀</li>
+                        <li>required: 指定文字區域為必填的</li>
+                        <li>wrap: 指定當提交表單時，文字區域中的文字應該怎樣換行，其值可以是hard或soft</li>
+                    </ul>
+                    範例：顯示一個文字輸入區及一個提交按鈕<br/>
+                    <textarea rows="8" cols="40" placeholder="寫點什麼" wrap="soft"></textarea><br/>
+                    <input type="submit"/>
+
+                    <h3>&ltbutton&gt</h3>
+                    用途：定義一個按鈕。與使用&ltinput&gt創建的按鈕不同處在於，在&ltbutton&gt內部可以放置文字或圖片等內容<br/>
+                    屬性：
+                    <ul>
+                        <li>disabled: 禁用此按鈕</li>
+                        <li>form: 定義按鈕所屬的一個或多個表單</li>
+                        <li>name: 按鈕的名稱</li>
+                        <li>type: 按鈕的類型，其值可以是button、reset或submit</li>
+                        <li>value: 指定按鈕的初始值。可由腳本進行修改</li>
+                    </ul>
+                    範例：定義一個按鈕<br/>
+                    <button type="button" name="myButton">按我</button>
+
+                    <h3>&ltselect&gt</h3>
+                    用途：創建下拉式選單，與&ltoption&gt一起使用<br/>
+                    屬性：
+                    <ul>
+                        <li>disabled: 禁用此選單</li>
+                        <li>form: 定義此選單所屬的一個或多個表單</li>
+                        <li>multiple: 指定可以選擇多個選項</li>
+                        <li>name: 選單的名稱</li>
+                        <li>required: 規定使用者在提交表單前必須選擇一個下拉列表中的選項</li>
+                        <li>size: 指定下拉列表中可見選項的數目</li>
+                    </ul>
+
+                    <h3>&ltoption&gt</h3>
+                    用途：定義下拉式選單中的一個選項（一個條目）<br/>
+                    屬性：
+                    <ul>
+                        <li>disabled: 定義此選項應在首次載入時被禁用</li>
+                        <li>selected: 指定選項（在首次顯示在列表中時）為選中狀態</li>
+                        <li>value: 定義選項的值</li>
+                    </ul>
+                    範例：定義兩個單選的下拉式選單和一個多選的下拉式選單<br/>
+                    <select size="3">
+                        <option value="op1">選項一</option>
+                        <option value="op2">選項二</option>
+                        <option value="op3">選項三</option>
+                        <option value="op4">選項四</option>
+                    </select>
+                    <select>
+                        <option value="opI">選項一</option>
+                        <option value="opII">選項二</option>
+                        <option value="opIII">選項三</option>
+                        <option value="opIV">選項四</option>
+                    </select>
+                    <select multiple>
+                        <option value="opA">選項A</option>
+                        <option value="opB">選項B</option>
+                        <option value="opC">選項C</option>
+                        <option value="opD">選項D</option>
+                    </select>
                 </div>
 
                 <div>
-                    <h2 class="sorting-title">其他</h2>
-                    <h3>&lt其他&gt</h3>
-                    用途：<br/>
+                    <h3>&ltlabel&gt</h3>
+                    用途：為input元素定義標註<br/>
                     屬性：
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>for: 指定label與哪個表單的元素綁定</li>
+                        <li>form: 指定label所屬的一個或多個表單</li>
                     </ul>
-                    範例：<br/>
 
+                    <h3>&ltfieldset&gt</h3>
+                    用途：將表單內的相關元素分組，在元素周圍繪製邊框<br/>
+                    屬性：
+                    <ul>
+                        <li>disabled: 指定該區塊中的相關表單元素應該被禁用</li>
+                        <li>form: 指定區塊所屬的一個或多個表單。</li>
+                        <li>name: 指定區塊的名稱</li>
+                    </ul>
+
+                    <h3>&ltlegend&gt</h3>
+                    用途：為&ltfieldset&gt元素定義標題<br/>
+                    範例：定義一個帶有標題的輸入區塊<br/>
+                    <fieldset>
+                        <legend>個人資訊</legend>
+                        Name: <input type="text"><br>
+                        Email: <input type="text"><br>
+                        Age: <input type="text">
+                    </fieldset>
+
+                    <hr/>
+
+                    <h2 class="sorting-title">Styles and Semantics</h2>
+                    <h3>&ltstyle&gt</h3>
+                    用途：定義HTML檔案的樣式信息<br/>
+                    屬性：
+                    <ul>
+                        <li>media: 為stylesheet指定不同的媒體類型</li>
+                        <li>scoped: 指定樣式僅僅應用到 style 元素的父元素及其子元素</li>
+                        <li>type: 規定stylesheet的MIME類型</li>
+                    </ul>
+                    註記：如果沒有使用"scoped"屬性，則每一個&ltstyle&gt tag必須位於&lthead&gt
+
+                    <h3>&ltdiv&gt</h3>
+                    用途：定義 HTML 文檔中的一個分隔區塊或者一個區域部分，常用於組合Block Level Element<br/>
+
+                    <h3>&ltspan&gt</h3>
+                    用途：用於對文檔中的Inline Element進行組合<br/>
+
+                    <h3>&ltsection&gt</h3>
+                    用途：定義了文檔的某個區域。比如章節、頂部、底部或者文檔的其他區域<br/>
+
+                    <h3>&ltarticle&gt</h3>
+                    用途：定義獨立的內容，內容本身必須是有意義的且必須是獨立於文檔的其餘部分，例如文章、新聞內文<br/>
+
+                    <h3>&ltaside&gt</h3>
+                    用途：定義&ltarticle&gt標籤外的內容，aside的內容應該與附近的內容相關，通常用作文章的側欄<br/>
+
+                    <hr/>
+
+                    <h2 class="sorting-title">Meta Info</h2>
+                    <h3>&ltmeta&gt</h3>
+                    用途：&ltmeta&gt提供了HTML文檔的元數據。元數據不會顯示在客戶端，但是會被瀏覽器解析，該tag通常用於指定網頁的描述，關鍵詞，文件的最後修改時間，作者及其他元數據<br/>
+                    屬性：
+                    <ul>
+                        <li>charset: 定義文檔的character encoding</li>
+                        <li>content: 定義與http-equiv或name屬性相關的元數據，其值可以是content-type、default-style、或refresh</li>
+                        <li>name: 把 content 屬性關聯到一個名稱，其值可以是application-name、author、description、generator、或keywords</li>
+                    </ul>
+                    註記：&ltmeta&gt標籤通常位於&lthead&gt區域內<br/>
+                    註記：元數據通常以鍵值對出現<br/>
+                    註記：元數據可以被瀏覽器（如何顯示內容或重新加載頁面），搜索引擎（關鍵詞），或其他 Web 服務調用
+
+                    <h3>&ltbase&gt</h3>
+                    用途：為頁面上的所有的相對連結指定預設URL或預設目標<br/>
+                    屬性：
+                    <ul>
+                        <li>href: 指定頁面中所有相對連結的基準URL</li>
+                        <li>target: 指定頁面中所有的連結和表單在何處打開。該屬性會被每個連結中的target屬性覆蓋</li>
+                    </ul>
+                    註記：在一個文檔中，最多能使用一個&ltbase&gt元素。&ltbase&gt必須位於&lthead&gt內部<br/>
+
+                    <hr/>
+
+                    <h2 class="sorting-title">Special Characters</h2>
+                    <ul>
+                        <li>輸入&amp;amp;顯示&amp;</li>
+                        <li>輸入&amp;quot顯示&quot</li>
+                        <li>輸入&amp;lt顯示&lt</li>
+                        <li>輸入&amp;gt顯示&gt</li>
+                        <li>輸入&amp;absp;顯示空格</li>
+                    </ul>
                 </div>
             </div>
         </main>
