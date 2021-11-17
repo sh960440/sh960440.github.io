@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML Basics Part 3">
+        <meta name="author" content="Shun-min Hsieh">
+        <meta name="keywords" content="HTML, basic, note">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Basics - 3</title>
+    </head>
+    <body style="background-color: cadetblue;">
+        <style>
+            .body-separator {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto;
+                gap: 5px;
+            }
+            .sorting-title {
+                color: maroon;
+            }
+            .header-and-footer {
+                background-color: wheat;
+                border-width: 5px;
+                border-radius: 10px;
+            }
+        </style>
+
+        <header class="header-and-footer">
+            <h1 style="text-align: center">HTML Basics - Lists / Tables</h1>
+        </header>
+
+        <main>
+            <div class="body-separator">
+                <div>
+                    <h2 class="sorting-title">Lists</h2>
+                    <h3>&ltli&gt</h3>
+                    用途：定義一個無序列表或有序列表中的項目<br/>
+
+                    <h3>&ltul&gt</h3>
+                    用途：定義一個無序列表，與&ltli&gt一起使用來創建一個無序列表<br/>
+                    範例：創建一個無序列表<br/>
+                    <ul>
+                        <li>這是一段文字</li>
+                        <li><a href="https://www.google.com">這是一個連結</a></li>
+                        <li><img src="../images/Taiwan.png" alt="Taiwan" title="This is Taiwan" height="100"/></li>
+                    </ul>
+                    
+                    <h3>&ltol&gt</h3>
+                    用途：定義一個有序列表，與&ltli&gt一起使用來創建一個有序列表<br/>
+                    屬性：
+                    <ul>
+                        <li>type: 指定列表序數的類型</li>
+                        <ul>
+                            <li>a: 小寫英文字母</li>
+                            <li>A: 大寫英文字母</li>
+                            <li>i: 小寫羅馬數字</li>
+                            <li>I: 大寫羅馬數字</li>
+                            <li>1: 阿拉伯數字</li>
+                        </ul>
+                        <li>reversed: 順序倒反顯示</li>
+                        <li>start: 起始的項次</li>
+                    </ul>
+                    範例：創建一個有序列表，以大寫英文字母為序數<br/>
+                    <ol type="A">
+                        <li>Apple</li>
+                        <li>Banana</li>
+                        <li>Cat</li>
+                        <li>Dog</li>
+                    </ol>
+
+                    <h3>&ltdl&gt</h3>
+                    用途：定義一個描述列表，與&ltdt&gt和&ltdl&gt一起使用來創建一個描述列表<br/>
+
+                    <h3>&ltdt&gt</h3>
+                    用途：定義一個描述列表的項目名字<br/>
+
+                    <h3>&ltdd&gt</h3>
+                    用途：用來對一個描述列表中的項目進行描述，在&ltdd&gt內能放置段落、換行、圖片、連結、列表等等<br/>
+                    範例：定義一個描述列表<br/>
+                    <dl>
+                        <dt>第一個項目</dt>
+                        <dd>項目一描述一</dd>
+                        <dd>項目二描述二</dd>
+                        <dt>第二個項目</dt>
+                        <dd>項目一描述一</dd>
+                    </dl>
+                </div>
+
+                <div>
+                    <h2 class="sorting-title">Tables</h2>
+                    <h3>&lttable&gt</h3>
+                    用途：定義一個表格<br/>
+
+                    <h3>&ltthead&gt</h3>
+                    用途：組合表格的header部分的內容<br/>
+                    註記：&ltthead&gt必須作為&lttable&gt的子元素，出現在&ltcaption&gt、&ltcolgroup&gt之後，&lttbody&gt、&lttfoot&gt和&lttr&gt之前<br/>
+
+                    <h3>&lttbody&gt</h3>
+                    用途：組合表格的body部分的內容<br/>
+                    註記：&lttbody&gt必須作為&lttable&gt的子元素，出現在&ltcaption&gt、&ltcolgroup&gt和&ltthead&gt之後<br/>
+
+                    <h3>&lttfoot&gt</h3>
+                    用途：組合表格的footer部分的內容<br/>
+                    註記：&lttfoot&gt必須作為&lttable&gt的子元素，出現在&ltcaption&gt、&ltcolgroup&gt和&ltthead&gt之後，&lttbody&gt和&lttr&gt之前<br/>
+
+                    <h3>&ltcaption&gt</h3>
+                    用途：定義表格標題<br/>
+                    註記：&ltcaption&gt必須放置到&lttable&gt之後。每個表格只能定義一個標題<br/>
+
+                    <h3>&lttr&gt</h3>
+                    用途：定義表格中的列。一個&lttr&gt元素包含一個或多個&ltth&gt或&lttd&gt元素<br/>
+
+                    <h3>&ltth&gt</h3>
+                    用途：定義一列中的標題格<br/>
+                    屬性：
+                    <ul>
+                        <li>colspan: 指定標題格可橫跨的列數</li>
+                        <li>rowspan: 指定標題格可橫跨的行數</li>
+                    </ul>
+
+                    <h3>&lttd&gt</h3>
+                    用途：定義儲存格中的內容（行）<br/>
+                    屬性：
+                    <ul>
+                        <li>colspan: 指定儲存格可橫跨的列數</li>
+                        <li>rowspan: 指定儲存格可橫跨的行數</li>
+                    </ul>
+                    範例：定義一個表格<br/>
+                    <table border="1">
+                        <caption>MONTHLY SAVINGS</caption>
+                        <thead>
+                            <tr>
+                                <th>header 1</th>
+                                <th>header 2</th>
+                                <th>header 3</th>
+                                <th>header 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>body 1</td>
+                                <td colspan="2">body 2</td>
+                                <td rowspan="2">body 3</td>
+                            </tr>
+                            <tr>
+                                <td>body 4</td>
+                                <td>body 5</td>
+                                <td>body 6</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">footer 1</td>
+                                <td colspan="2">footer 2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <br/>
+        <footer class="header-and-footer" style="font-size: x-large;">
+            <b>
+                &nbsp;References: 
+                <nav>
+                    &nbsp;
+                    <a href="https://www.w3schools.com/TAGS/ref_byfunc.asp">English</a> |
+                    <a href="http://web.thu.edu.tw/hzed/www/tag.htm">Traditional Chinese</a> |
+                    <a href="https://www.runoob.com/tags/ref-byfunc.html">Simplified Chinese</a>
+                </nav>
+                &nbsp;&nbsp;<a href="../index.html">Homepage</a>
+            </b>  
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> <!-- meta tag: 用於定義有關檔案資訊的tag，此處用來定義網頁的字符編碼 -->
+        <meta name="description" content="This is my first html website"> <!-- 定義網頁的描述，以便瀏覽器或Google搜尋等使用。name和content等稱為attribute或property -->
+        <meta name="author" content="Samuel">
+        <meta name="keywords" content="HTML, beginner, notes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Samuel's Website</title>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section>
+                    <aside> <!-- aside: 次要的內容，與主要內容分開但間接相關，通常在側邊欄中表示 -->
+
+                    </aside>
+                </section>
+            </article>
+        </main>
+
+        <p style="color:darkgreen; background-color: goldenrod;"> <!-- style attribute用來改變文字的style，例如顏色 -->
+            You can style your HTML and make it look pretty
+        </p>
+        <hr/>
+        <p>
+            <h4>Spans and Divs</h4>
+            inline element: 只需要該元素長度所佔頁面空間的元素，可以並排，例如a tag<br/>
+            block element: 需要佔據頁面的一整列的元素，無法並排，例如p tag<br/>
+            span用於inline container<br/>
+            div用於block container<br/><br/>
+
+            <span>span1</span>
+            <span>span2</span>
+
+            <div>div1</div>
+            <div>div2</div>
+        </p>
+        <p>
+            <h4>Input and Forms</h4> <!-- 參見https://www.w3schools.com/tags/att_input_type.asp -->
+            <input type="text" value="Username"/> <!-- input: 用於輸入的tag，type指定輸入的類型，value為預設的內容 -->
+            <br/>
+            <input type="password"/>
+            <br/>
+            <!-- textarea: 一整塊輸入的空間，不限於一行，cols跟rows代表行列數 -->
+            <textarea rows="10" cols="30">Enter a paragraph.</textarea>
+            <br/>
+            <input type="date"/>
+            <br/>
+            <input type="email"/>
+            <br/>
+            <input type="range"/>
+            <br/>
+            <input type="file"/>
+            <br/>
+            <input type="checkbox"/>
+            <br/>
+            <input name="btn" type="radio"/> <!-- 同一個name底下的radio只能有一個被選取 -->
+            <input name="btn" type="radio"/>
+            <br/>
+            <input type="submit"/>
+
+            <form> <!-- form: 一種用於input的wrapper -->
+
+            </form>
+        </p>
+    </body>
+</html>

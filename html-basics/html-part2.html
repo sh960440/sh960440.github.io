@@ -28,57 +28,126 @@
         </style>
 
         <header class="header-and-footer">
-            <h1 style="text-align: center">HTML Basics - 待輸入內容</h1>
+            <h1 style="text-align: center">HTML Basics - Media Tags / Link Tags / Frames</h1>
         </header>
 
         <main>
-            <h2 class="sorting-title">Image Tags</h2>
-            <h3>img</h3>
-            用途：加入圖片<br/>
-            屬性：
-            <ul>
-                <li>src: 路徑。可以是目錄中的檔案或是網路上圖片的網址</li>
-                <li>width: 寬度。若只有指定寬度時則會自動依比例調整高度</li>
-                <li>height: 高度。若只有指定高度時則會自動依比例調整寬度</li>
-                <li>alt: 圖片的替代文字，用於圖片無法正常顯示時</li>
-                <li>title: 圖片的標題，滑鼠停在圖片上時顯示的文字</li>
-            </ul>
-            範例：從目錄中取得一張圖片，將其高度設置為100px<br/>
-            <img src="../images/Taiwan.png" alt="Taiwan" title="This is Taiwan" height="100"/><br/>
-            範例：從網路上取得一張圖片，將其高度設置為100px<br/>
-            <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-Canada.png" alt="Canada" title="This is Canada" height="100"/>
+            <div class="body-separator">
+                <div>
+                    <h2 class="sorting-title">Image / Audio / Video Tags</h2>
+                    <h3>&ltimg/&gt</h3>
+                    用途：加入圖片<br/>
+                    屬性：
+                    <ul>
+                        <li>src: 圖片的路徑。可以是目錄中的檔案或是網路上圖片的網址</li>
+                        <li>width: 圖片的寬度。若只有指定寬度時則會自動依比例調整高度</li>
+                        <li>height: 圖片的高度。若只有指定高度時則會自動依比例調整寬度</li>
+                        <li>alt: 圖片的替代文字，用於圖片無法正常顯示時</li>
+                        <li>title: 圖片的標題，滑鼠停在圖片上時顯示的文字</li>
+                    </ul>
+                    範例：從目錄中取得一張圖片，將其高度設置為100px<br/>
+                    <img src="../images/Taiwan.png" alt="Taiwan" title="This is Taiwan" height="100"/><br/>
+                    範例：從網路上取得一張圖片，將其高度設置為100px<br/>
+                    <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-Canada.png" alt="Canada" title="This is Canada" height="100"/>
 
-            <hr/>
+                    <h3>&ltaudio&gt</h3>
+                    用途：加入音訊<br/>
+                    屬性：
+                    <ul>
+                        <li>src: 音訊的路徑</li>
+                        <li>autoplay: 自動播放</li>
+                        <li>controls: 顯示控制介面</li>
+                        <li>loop: 循環播放</li>
+                        <li>muted: 靜音</li>
+                    </ul>
+                    範例：從目錄中取得音訊檔，顯示控制介面，預設其為靜音，並開啟循環播放<br/>
+                    <audio src="../audio/correct-answer.mp3" muted controls loop>Correct Answer</audio>
 
-            <h2 class="sorting-title">Audio / Video Tags</h2>
-            <h3>audio</h3>
-            用途：加入音訊檔<br/>
-            屬性：
-            <ul>
-                <li>src: 路徑</li>
-                <li>autoplay: 自動播放</li>
-                <li>controls: 顯示控制介面</li>
-                <li>loop: 循環播放</li>
-                <li>muted: 靜音</li>
-            </ul>
-            範例：從目錄中取得音訊檔，顯示控制介面，預設其為靜音，並開啟循環播放<br/>
-            <audio src="../audio/correct-answer.mp3" muted controls loop>Correct Answer</audio>
+                    <h3>&ltvideo&gt</h3>
+                    用途：加入影片<br/>
+                    屬性：
+                    <ul>
+                        <li>src: 影片的路徑</li>
+                        <li>autoplay: 自動播放</li>
+                        <li>controls: 顯示控制介面</li>
+                        <li>loop: 循環播放</li>
+                        <li>muted: 靜音</li>
+                        <li>poster: 使用者播放影片前顯示的圖片</li>
+                        <li>width: 影片播放器的寬度</li>
+                        <li>height: 影片播放器的高度</li>
+                    </ul>
+                    範例：從目錄中取得一個影片檔，設置其寬度為200px，顯示控制介面，並設置一張預設圖片<br/>
+                    <video src="../videos/test-video.mp4" width="300px" controls poster="../images/test-video-poster.png">JOJO</video>
+                </div>
 
-            <h3>source</h3>
-            <h3>track</h3>
-            <h3>video</h3>
+                <div>
+                    <h2 class="sorting-title">Link Tags</h2>
+                    <h3>&lta&gt</h3>
+                    用途：添加超連結<br/>
+                    屬性：
+                    <ul>
+                        <li>href: 指定目標URL</li>
+                        <li>download: 指定下載連結</li>
+                        <li>title: 指定滑鼠放在連結上時顯示的文字</li>
+                        <li>target: 指定打開目標URL的方法，可能的值有</li>
+                        <ul>
+                            <li>_blank: 在新視窗打開</li>
+                            <li>_parent: 在父窗口打開</li>
+                            <li>_self: 在此視窗打開，_self為預設值</li>
+                        </ul>
+                    </ul>
+                    範例：建立一個文字連結，點擊後在新視窗顯示一張韓國國旗，滑鼠放在連結上時會顯示目的地<br/>
+                    <a href="../images/South Korea.png" target="_parent" title="Korea">看看韓國國旗</a><br/>
+                    範例：建立一個圖片連結，點擊後讓此視窗移動至Google首頁，滑鼠放在連結上時會顯示目的地<br/>
+                    <a href="https://www.google.com" title="Google.com"><img src="../images/Google.png" alt="Google" width="64" height="64" /></a>
 
-            <hr/>
+                    <h3>&ltlink&gt</h3>
+                    用途：定義文檔與外部資源的關係，最常見的用途是連結stylesheet<br/>
+                    屬性：
+                    <ul>
+                        <li>href: 指定被連結檔案的位置</li>
+                        <li>rel: relationship，定義此檔案與被連結檔案之間的關係，包括alternate、icon、stylesheet等21種可用參數</li>
+                        <li>type: 規定被連結的MIME類型</li>
+                    </ul>
 
-            <h2 class="sorting-title">Link Tags</h2>
+                    <h3>&ltnav&gt</h3>
+                    用途：定義導航連結<br/>
+                    範例：定義到三個網站的導航連結<br/>
+                    <nav>
+                        <a href="https://www.google.com">Google</a> |
+                        <a href="https://www.youtube.com">YouTube</a> |
+                        <a href="https://www.twitch.tv">Twitch</a> |
+                    </nav>
 
+                    <hr/>
+
+                    <h2 class="sorting-title">Frames</h2>
+                    <h3>&ltiframe&gt</h3>
+                    用途：指定一個inline frame，inline frame用來在目前的html檔案中嵌入另一個檔案
+                    屬性：
+                    <ul>
+                        <li>height: 定義&ltiframe&gt的高度</li>
+                        <li>weight: 定義&ltiframe&gt的寬度</li>
+                        <li>name: 定義&ltname&gt的名稱</li>
+                        <li>src: 指定在&ltname&gt中顯示的檔案的URL</li>
+                    </ul>
+                    範例：嵌入一個網頁<br/>
+                    <iframe src="https://giraffeacademy.com/" width="800" height="400">Sorry something should be here</iframe>
+                </div>
+            </div>
         </main>
-
-        <footer class="header-and-footer">
-            <a href="https://www.w3schools.com/TAGS/ref_byfunc.asp"><h3>References(English))</h3></a>
-            <a href="http://web.thu.edu.tw/hzed/www/tag.htm"><h3>References(Traditional Chinese)</h3></a>
-            <a href="https://www.runoob.com/tags/ref-byfunc.html"><h3>References(Simplified Chinese)</h3></a>
-            <a href="../index.html"><h3>Homepage</h3></a>
+        <br/>
+        <footer class="header-and-footer" style="font-size: x-large;">
+            <b>
+                &nbsp;References: 
+                <nav>
+                    &nbsp;
+                    <a href="https://www.w3schools.com/TAGS/ref_byfunc.asp">English</a> |
+                    <a href="http://web.thu.edu.tw/hzed/www/tag.htm">Traditional Chinese</a> |
+                    <a href="https://www.runoob.com/tags/ref-byfunc.html">Simplified Chinese</a>
+                </nav>
+                &nbsp;&nbsp;<a href="../index.html">Homepage</a>
+            </b>  
         </footer>
     </body>
 </html>
